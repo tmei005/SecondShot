@@ -1,2 +1,2 @@
-# MockInterviewWebApp
+# SecondShot
 Mock AI Interview tool
