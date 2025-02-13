@@ -1,26 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import VoiceToText from "./pages/VoiceToText";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* test pull request */}
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/voice-to-text">Voice to Text</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/voice-to-text" element={<VoiceToText />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
