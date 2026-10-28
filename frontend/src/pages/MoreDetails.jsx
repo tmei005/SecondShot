@@ -30,7 +30,7 @@ const MoreDetails = () => {
 
   const handleSendEval = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/feedback", {
+      const res = await axios.post("http://localhost:5001/feedback", {
         message: selfEvaluation,
       });
       alert(res.data.message || "Evaluation saved successfully!");
@@ -51,7 +51,7 @@ const MoreDetails = () => {
       const formattedLinks = recordings
         .map((rec, index) => {
           if (rec.fileId) {
-            return `Question ${index + 1}: http://localhost:5000/video/${rec.fileId}`;
+            return `Question ${index + 1}: http://localhost:5001/video/${rec.fileId}`;
           }
           return null;
         })

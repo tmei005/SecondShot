@@ -21,7 +21,7 @@ const VideoUpload = () => {
     formData.append("video", file);
 
     try {
-      const res = await axios.post("http://localhost:5000/upload-video", formData, {
+      const res = await axios.post("http://localhost:5001/upload-video", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -45,7 +45,7 @@ const VideoUpload = () => {
           <h3>Watch Video:</h3>
           <video controls width="600">
             {/* Dynamically fetching video URL using the videoId */}
-            <source src={`http://localhost:5000/video/${videoId}`} type="video/mp4" />
+            <source src={`http://localhost:5001/video/${videoId}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

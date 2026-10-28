@@ -8,7 +8,7 @@ const InterviewHistory = () => {
   useEffect(() => {
     const fetchInterviews = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/interviews");
+        const response = await axios.get("http://localhost:5001/interviews");
         console.log("Fetched Interviews: ", response.data); // Debug log for fetched data
 
         setInterviews(response.data);
@@ -65,7 +65,7 @@ const InterviewHistory = () => {
                 <li key={index}>
                   <video controls width="320" height="240">
                     <source
-                      src={`http://localhost:5000/video/${interview.filename}`}
+                      src={`http://localhost:5001/video/${interview.filename}`}
                       type="video/webm"
                     />
                     Your browser does not support the video tag.
@@ -104,7 +104,7 @@ const InterviewCarousel = ({ date, interviews }) => {
         <div className="interview-card">
           <video key={currentInterview.filename} controls width="320" height="240">
             <source
-              src={`http://localhost:5000/video/${currentInterview.filename}`}
+              src={`http://localhost:5001/video/${currentInterview.filename}`}
               type="video/webm"
             />
             Your browser does not support the video tag.

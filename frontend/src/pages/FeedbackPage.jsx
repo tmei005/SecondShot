@@ -8,7 +8,7 @@ const FeedbackPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/feedback", { message });
+      const res = await axios.post("http://localhost:5001/feedback", { message });
       setResponse(res.data.message);
       setMessage("");
     } catch (err) {

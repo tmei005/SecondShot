@@ -17,7 +17,7 @@ module.exports = function (bucket) {
     try {
       // Create video links from fileIds
       const videoLinks = fileIds.map(
-        (id) => `http://localhost:5000/video/${id}`
+        (id) => `http://localhost:5001/video/${id}`
       ).join('\n');
 
       // Configure the email
