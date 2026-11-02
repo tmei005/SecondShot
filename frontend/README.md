@@ -14,6 +14,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### Configure Auth0 sign-in
+
+The sign-in and Get Started buttons require an Auth0 Single Page Application.
+Copy `.env.example` to `.env.local` and replace its values with the application's
+domain and client ID:
+
+```bash
+cp .env.example .env.local
+```
+
+In the Auth0 application settings, add `http://localhost:3000` to Allowed
+Callback URLs, Allowed Logout URLs, and Allowed Web Origins. Restart the
+development server after changing `.env.local`.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

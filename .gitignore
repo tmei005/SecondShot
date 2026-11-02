@@ -22,3 +22,7 @@ backend/package.json
 frontend/package-lock.json
 frontend/package.json
 backend/package-lock.json
+
+docs/
+scripts/
+AGENTS.md
