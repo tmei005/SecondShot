@@ -23,6 +23,8 @@ frontend/package-lock.json
 frontend/package.json
 backend/package-lock.json
 
-docs/
-scripts/
-AGENTS.md
+docs/*
+!docs/prompt-workflow.md
+scripts/*
+!scripts/run-prompt-workflow.sh
+!AGENTS.md
