@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../components/InterviewPage.css";
+import "./InterviewPage.css";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -191,7 +191,7 @@ const InterviewPage = () => {
   };
 
   return (
-    <div className="interview-container">
+    <div className="interview-session-container">
       <div className="interview-wrapper">
         {/* Video container with question overlay */}
         <div className="video-wrapper">

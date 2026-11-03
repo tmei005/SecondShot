@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import "./VoiceToText.css";
 
 const VoiceToText = () => {
   const [text, setText] = useState("");
@@ -78,7 +79,7 @@ const VoiceToText = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div className="voice-to-text-page">
       <h2>Voice to Text</h2>
       <button onClick={startListening} disabled={isRecording}>
         {isRecording ? "Listening..." : "Start Recording"}
@@ -86,14 +87,14 @@ const VoiceToText = () => {
       <button
         onClick={stopListening}
         disabled={!isRecording}
-        style={{ marginLeft: "10px" }}
+        className="voice-to-text-stop"
       >
         Stop Recording
       </button>
       <p>
         <strong>Live Speech Output:</strong> {text}
       </p>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="voice-to-text-error">{error}</p>}
     </div>
   );
 };

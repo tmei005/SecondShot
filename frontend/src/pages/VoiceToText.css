@@ -1,0 +1,12 @@
+.voice-to-text-page {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.voice-to-text-stop {
+  margin-left: 10px;
+}
+
+.voice-to-text-error {
+  color: red;
+}

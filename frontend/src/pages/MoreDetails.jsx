@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../components/MoreDetails.css";
+import "./MoreDetails.css";
 import axios from "axios";
 
 const MoreDetails = () => {
@@ -162,14 +162,14 @@ const MoreDetails = () => {
           <button onClick={handleSend} className="send-button">
             Send via Gmail
           </button>
-          <div style={{ marginTop: "10px", fontSize: "14px" }}>
+          <div className="video-links-option">
             <input
               type="checkbox"
               id="includeVideoLinks"
               checked={includeVideoLinks}
               onChange={() => setIncludeVideoLinks(!includeVideoLinks)}
             />
-            <label htmlFor="includeVideoLinks" style={{ marginLeft: "8px" }}>
+            <label htmlFor="includeVideoLinks">
               Include video links in email
             </label>
           </div>
@@ -177,7 +177,7 @@ const MoreDetails = () => {
       </div>
 
       {/* Interview History Button */}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: "30px" }}>
+      <div className="history-button-container">
         <button
           className="history-button"
           onClick={() => navigate("/interview-history")}

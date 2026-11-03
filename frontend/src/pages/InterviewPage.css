@@ -1,5 +1,5 @@
 /* Interview page layout */
-.interview-container {
+.interview-session-container {
   width: 100%;
   max-width: 100%;
   background-color: rgb(93, 95, 102);
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.interview-wrapper {
+.interview-session-container .interview-wrapper {
   width: 70%;
   max-width: 1200px;
   display: flex;
@@ -19,13 +19,13 @@
 }
 
 /* Video container with overlay positioning */
-.video-wrapper {
+.interview-session-container .video-wrapper {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
 
-.video-container {
+.interview-session-container .video-container {
   width: 100%;
   height: 100%;
   aspect-ratio: 16/9;
@@ -35,14 +35,14 @@
   background-color: #000;
 }
 
-.user-video {
+.interview-session-container .user-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Question overlay */
-.question-overlay {
+.interview-session-container .question-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -55,19 +55,19 @@
   z-index: 10;
 }
 
-.question-overlay h3 {
+.interview-session-container .question-overlay h3 {
   margin: 0 0 5px 0;
   font-size: 18px;
 }
 
-.question-text {
+.interview-session-container .question-text {
   font-size: 18px;
   line-height: 1.4;
   margin: 0;
 }
 
 /* Recording indicator */
-.recording-indicator {
+.interview-session-container .recording-indicator {
   position: absolute;
   bottom: 15px;
   right: 15px;
@@ -80,7 +80,7 @@
   gap: 8px;
 }
 
-.recording-dot {
+.interview-session-container .recording-dot {
   width: 12px;
   height: 12px;
   background-color: #ff4136;
@@ -89,19 +89,19 @@
 }
 
 @keyframes pulse {
-  0% {
+  .interview-session-container 0% {
     opacity: 1;
   }
-  50% {
+  .interview-session-container 50% {
     opacity: 0.5;
   }
-  100% {
+  .interview-session-container 100% {
     opacity: 1;
   }
 }
 
 /* Error message */
-.error-message {
+.interview-session-container .error-message {
   color: #ffffff;
   background-color: #d32f2f;
   padding: 20px;
@@ -116,14 +116,14 @@
 }
 
 /* Control buttons */
-.controls-container {
+.interview-session-container .controls-container {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.start-button, .skip-button, .record-button, .stop-button, .next-button {
+.interview-session-container .start-button, .interview-session-container .skip-button, .interview-session-container .record-button, .interview-session-container .stop-button, .interview-session-container .next-button {
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
@@ -134,45 +134,45 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.start-button {
+.interview-session-container .start-button {
   background-color: #4CAF50;
   color: white;
   padding: 16px 32px;
   font-size: 18px;
 }
 
-.start-button:hover {
+.interview-session-container .start-button:hover {
   background-color: #45a049;
 }
 
-.skip-button {
+.interview-session-container .skip-button {
   background-color: #2196F3;
   color: white;
 }
 
-.skip-button:hover {
+.interview-session-container .skip-button:hover {
   background-color: #0b7dda;
 }
 
-.stop-button {
+.interview-session-container .stop-button {
   background-color: #f44336;
   color: white;
 }
 
-.stop-button:hover {
+.interview-session-container .stop-button:hover {
   background-color: #d32f2f;
 }
 
-.next-button {
+.interview-session-container .next-button {
   background-color: #673AB7;
   color: white;
 }
 
-.next-button:hover {
+.interview-session-container .next-button:hover {
   background-color: #5e35b1;
 }
 
-.disabled, button:disabled {
+.interview-session-container .disabled, .interview-session-container button:disabled {
   background-color: #cccccc;
   color: #666666;
   cursor: not-allowed;
@@ -180,7 +180,7 @@
 }
 
 /* Countdown container */
-.countdown-container {
+.interview-session-container .countdown-container {
   display: flex;
   color: white;
   flex-direction: row;
@@ -192,32 +192,32 @@
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
-.countdown-container p {
+.interview-session-container .countdown-container p {
   font-size: 18px;
   margin: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .interview-container {
+  .interview-session-container {
     padding: 10px;
   }
   
-  .question-overlay {
+  .interview-session-container .question-overlay {
     padding: 10px;
   }
   
-  .question-text {
+  .interview-session-container .question-text {
     font-size: 16px;
   }
   
-  .start-button, .skip-button, .record-button, .stop-button, .next-button {
+  .interview-session-container .start-button, .interview-session-container .skip-button, .interview-session-container .record-button, .interview-session-container .stop-button, .interview-session-container .next-button {
     padding: 10px 20px;
     font-size: 14px;
   }
 }
 /* Add these styles to make the finish button distinct from the next button */
-.finish-button {
+.interview-session-container .finish-button {
   background-color: #4CAF50;  /* Green color for completion */
   color: white;
   padding: 12px 24px;
@@ -230,11 +230,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.finish-button:hover {
+.interview-session-container .finish-button:hover {
   background-color: #45a049;
 }
 
-.finish-button.disabled {
+.interview-session-container .finish-button.disabled {
   background-color: #cccccc;
   color: #666666;
   cursor: not-allowed;

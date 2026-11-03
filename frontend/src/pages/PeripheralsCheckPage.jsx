@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../components/Peripherals.css";
+import "./PeripheralsCheckPage.css";
 
 const PeripheralsCheckPage = () => {
   const navigate = useNavigate();
@@ -326,10 +326,12 @@ const PeripheralsCheckPage = () => {
                 <button onClick={toggleMicrophoneTest}>
                   {isMicTesting ? "Stop Testing" : "Test Microphone"}
                 </button>
-                <div className="mic-level-container" style={{ marginTop: "10px", width: "100%" }}>
+                <div className="mic-level-container">
                   <div className="mic-level-bar">
-                    <div className={`mic-level-fill ${getMicLevelColorClass()}`} 
-                      style={{ width: `${micLevel}%` }} />
+                    <div
+                      className={`mic-level-fill ${getMicLevelColorClass()}`}
+                      style={{ "--mic-level-width": `${micLevel}%` }}
+                    />
                   </div>
                 </div>
               </>

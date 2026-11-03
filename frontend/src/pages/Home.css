@@ -1,0 +1,118 @@
+.home-page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: white;
+}
+
+.home-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  transform: scale(var(--home-scale));
+  transform-origin: top left;
+}
+
+.home-sidebar,
+.home-logo,
+.home-instructions,
+.home-get-started,
+.home-divider,
+.home-sign-in,
+.home-contact {
+  position: absolute;
+}
+
+.home-sidebar {
+  top: 0;
+  left: 0;
+  width: 945px;
+  height: 1080px;
+  background: #d9d9d9;
+}
+
+.home-logo {
+  top: 71px;
+  left: 325px;
+}
+
+.home-instructions {
+  top: 490px;
+  left: 128px;
+  width: 688px;
+  height: 317px;
+  color: black;
+  font: 400 25px Arial, sans-serif;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.home-get-started {
+  top: 337px;
+  left: 1252px;
+  display: flex;
+  width: 369px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background: #d9d9d9;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home-get-started-label {
+  color: black;
+  font: 600 40px Arial, sans-serif;
+  text-align: center;
+}
+
+.home-divider {
+  width: 442px;
+  height: 0;
+  border-top: 1px solid black;
+}
+
+.home-divider-one {
+  top: 540px;
+  left: 1216px;
+}
+
+.home-divider-two {
+  top: 646px;
+  left: 1216px;
+}
+
+.home-divider-three {
+  top: 781px;
+  left: 1217px;
+}
+
+.home-sign-in {
+  top: 574px;
+  left: 1349px;
+  width: 175px;
+  height: 34px;
+  color: black;
+  font: 600 32px Arial, sans-serif;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.home-contact {
+  top: 709px;
+  left: 1365px;
+  color: black;
+  font: 600 32px Arial, sans-serif;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.home-contact-link {
+  margin-left: 10px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}

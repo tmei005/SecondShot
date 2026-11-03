@@ -13,7 +13,7 @@
   }
   
   /* Main layout - camera on left, mic/speaker on right */
-  .check-sections {
+  .peripherals-check-container .check-sections {
     display: flex;
     flex-direction: row;
     gap: 1.5%;
@@ -21,12 +21,12 @@
   }
   
   /* Camera section styles (left side) */
-  .camera-section {
+  .peripherals-check-container .camera-section {
     flex: 1;
     max-width: 50%;
   }
   
-  .camera-display {
+  .peripherals-check-container .camera-display {
     width: 100%;
     height: 300px;
     border-radius: 8px;
@@ -39,59 +39,59 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .camera-display video {
+  .peripherals-check-container .camera-display video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .loading-indicator {
+  .peripherals-check-container .loading-indicator {
     padding: 15px;
     text-align: center;
     color: #666;
   }
   
   /* Audio-visual section (right side) */
-  .av-section {
+  .peripherals-check-container .av-section {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
   
-  .test-section {
+  .peripherals-check-container .test-section {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
-  .question-section {
+  .peripherals-check-container .question-section {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
-  .question-section h3{
+  .peripherals-check-container .question-section h3 {
     margin: 0;
     margin-bottom: 15px;
     color: #333;
   }
-  .test-section h3 {
+  .peripherals-check-container .test-section h3 {
     margin-top: 0;
     margin-bottom: 15px;
     color: #333;
   }
   
-  .test-item {
+  .peripherals-check-container .test-item {
     margin-bottom: 20px;
   }
   
-  .test-item:last-child {
+  .peripherals-check-container .test-item:last-child {
     margin-bottom: 0;
   }
   
   /* Form controls styling */
-  select {
+  .peripherals-check-container select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -100,7 +100,7 @@
     background-color: #fff;
   }
   
-  button {
+  .peripherals-check-container button {
     padding: 10px 15px;
     background-color: #2196F3;
     color: white;
@@ -111,17 +111,17 @@
     margin: 5px 0;
   }
   
-  button:hover {
+  .peripherals-check-container button:hover {
     background-color: #0b7dda;
   }
   
   /* Mic level visualization */
-  .mic-level-container {
-    margin-top: 15px;
+  .peripherals-check-container .mic-level-container {
+    margin-top: 10px;
     width: 100%;
   }
   
-  .mic-level-bar {
+  .peripherals-check-container .mic-level-bar {
     width: 100%;
     height: 20px;
     background-color: #f0f0f0;
@@ -129,26 +129,26 @@
     overflow: hidden;
   }
   
-  .mic-level-fill {
+  .peripherals-check-container .mic-level-fill {
     height: 100%;
-    width: 0;
+    width: var(--mic-level-width, 0%);
     transition: width 0.1s ease-in-out;
   }
   
-  .mic-level-fill.low {
+  .peripherals-check-container .mic-level-fill.low {
     background-color: #4CAF50;
   }
   
-  .mic-level-fill.medium {
+  .peripherals-check-container .mic-level-fill.medium {
     background-color: #FFC107;
   }
   
-  .mic-level-fill.high {
+  .peripherals-check-container .mic-level-fill.high {
     background-color: #F44336;
   }
   
   /* Error message styling */
-  .error-message {
+  .peripherals-check-container .error-message {
     color: #d32f2f;
     background-color: #ffebee;
     padding: 10px;
@@ -157,12 +157,12 @@
   }
   
   /* Navigation section */
-  .navigation-section {
+  .peripherals-check-container .navigation-section {
     text-align: center;
     margin-top: 20px;
   }
   
-  .proceed-button {
+  .peripherals-check-container .proceed-button {
     background-color: #4CAF50;
     color: white;
     padding: 12px 24px;
@@ -173,22 +173,22 @@
     transition: background-color 0.3s;
   }
   
-  .proceed-button:hover {
+  .peripherals-check-container .proceed-button:hover {
     background-color: #45a049;
   }
   /* Disabled button styles */
-  .proceed-button.disabled {
+  .peripherals-check-container .proceed-button.disabled {
     background-color: #cccccc;
     cursor: not-allowed;
     color: #666666;
   }
 
-  .proceed-button.disabled:hover {
+  .peripherals-check-container .proceed-button.disabled:hover {
     background-color: #cccccc;
     transform: none;
   }
 
-  .question-list {
+  .peripherals-check-container .question-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -199,7 +199,7 @@
   }
   
   
-  .question-item {
+  .peripherals-check-container .question-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,20 +211,20 @@
     transition: background-color 0.2s;
   }
   
-  .question-item:hover {
+  .peripherals-check-container .question-item:hover {
     background-color: #e0e0e0;
   }
   
-  .question-item.selected {
+  .peripherals-check-container .question-item.selected {
     background-color: #d4edda; /* light green for selected */
   }
   
-  .question-text {
+  .peripherals-check-container .question-text {
     flex-grow: 1;
     font-size: 16px;
   }
   
-  .checkmark {
+  .peripherals-check-container .checkmark {
     color: #2e7d32; /* green */
     font-size: 18px;
     margin-left: 10px;
@@ -233,15 +233,15 @@
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
-    .check-sections {
+    .peripherals-check-container .check-sections {
       flex-direction: column;
     }
     
-    .camera-section {
+    .peripherals-check-container .camera-section {
       max-width: 100%;
     }
     
-    .camera-display {
+    .peripherals-check-container .camera-display {
       height: 250px;
     }
   }
