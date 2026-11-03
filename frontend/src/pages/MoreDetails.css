@@ -4,13 +4,13 @@
   min-height: 100vh;
   background-color: rgb(93, 95, 102);
 }
-.feedback-title {
+.feedback-container .feedback-title {
   text-align: center;
   margin-bottom: 15px;
   color: white;
   font-size: 32px;
 }
-.panels-container {
+.feedback-container .panels-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 1600px;
 }
-.feedback-panel {
+.feedback-container .feedback-panel {
   width: 380px;
   height: 450px;
   background: #D9D9D9;
@@ -33,36 +33,36 @@
   display: flex;
   flex-direction: column;
 }
-.panel-title {
+.feedback-container .panel-title {
   font-size: 24px;
   margin-bottom: 15px;
   color: #333;
 }
-.playback-panel {
+.feedback-container .playback-panel {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.question-text {
+.feedback-container .question-text {
   font-weight: bold;
   text-align: center;
   font-size: 16px;
   margin-bottom: 10px;
 }
-.video-player {
+.feedback-container .video-player {
   width: 100%;
   height: 220px;
   object-fit: cover;
   margin-bottom: 10px;
   border-radius: 4px;
 }
-.navigation-buttons {
+.feedback-container .navigation-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.nav-button {
+.feedback-container .nav-button {
   padding: 6px 12px;
   font-size: 14px;
   cursor: pointer;
@@ -70,20 +70,20 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.nav-button:disabled {
+.feedback-container .nav-button:disabled {
   background: #f0f0f0;
   color: #999;
   cursor: not-allowed;
 }
-.no-recordings {
+.feedback-container .no-recordings {
   margin-top: 50px;
   font-style: italic;
   color: #666;
 }
-.evaluation-panel h3 {
+.feedback-container .evaluation-panel h3 {
   text-align: center;
 }
-.evaluation-textarea {
+.feedback-container .evaluation-textarea {
   width: 100%;
   height: 250px;
   padding: 10px;
@@ -92,33 +92,33 @@
   border-radius: 4px;
   resize: none;
 }
-.rating-container {
+.feedback-container .rating-container {
   display: flex;
   justify-content: center;
   margin-top: 15px;
 }
-.star-rating {
+.feedback-container .star-rating {
   font-size: 30px;
   cursor: pointer;
   margin-right: 5px;
 }
-.star-active {
+.feedback-container .star-active {
   color: gold;
 }
-.star-inactive {
+.feedback-container .star-inactive {
   color: gray;
 }
-.mentor-panel h3 {
+.feedback-container .mentor-panel h3 {
   text-align: center;
 }
-.email-input {
+.feedback-container .email-input {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.message-textarea {
+.feedback-container .message-textarea {
   width: 100%;
   height: 150px;
   padding: 10px;
@@ -127,7 +127,7 @@
   border-radius: 4px;
   resize: none;
 }
-.send-button {
+.feedback-container .send-button {
   width: 90%;
   padding: 10px;
   background: black;
@@ -141,10 +141,10 @@
   margin-left: auto;
   margin-right: auto;
 }
-.send-button:hover {
+.feedback-container .send-button:hover {
   background: #333;
 }
-.history-button {
+.feedback-container .history-button {
   background-color: #3cb371;
   color: white;
   padding: 12px 20px;
@@ -153,11 +153,23 @@
   border-radius: 6px;
   cursor: pointer;
 }
-.history-button:hover {
+.feedback-container .history-button:hover {
   background-color: #2e8b57;
 }
+.feedback-container .video-links-option {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.feedback-container .video-links-option label {
+  margin-left: 8px;
+}
+.feedback-container .history-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 @media (max-width: 1400px) {
-  .feedback-panel {
+  .feedback-container .feedback-panel {
     position: relative;
     left: auto;
     top: auto;

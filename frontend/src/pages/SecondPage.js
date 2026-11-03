@@ -1,18 +1,10 @@
 import React from "react";
 import LogoutButton from "../components/LogoutButton";
+import "./Logout.css";
 
 const HelloPage = () => {
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "white",
-      }}
-    >
+    <div className="logout-page">
       <LogoutButton />
     </div>
   );

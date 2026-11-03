@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../components/InterviewHist.css";
+import "./InterviewHistory.css";
 import axios from "axios";
 
 const InterviewHistory = () => {
@@ -46,7 +46,7 @@ const InterviewHistory = () => {
   }, {});
   
   return (
-    <div className="interview-container">
+    <div className="interview-history-container">
       <h1 className="interview-title">Interviews by Date</h1>
       <div className="interview-grid">
         {Object.entries(interviewsByDate).map(([date, interviewsForDate]) => (
